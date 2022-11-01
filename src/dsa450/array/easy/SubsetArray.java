@@ -5,9 +5,30 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
+You are given two integer arrays ARR1 and ARR2 of length N and M respectively.
+You have to return true if ARR2 is a subset of ARR1, otherwise, return false.
 arr1[] = {1, 2, 3}
 arr2[] = {1, 2}
 Array 2 is said to be subset of array 1 if all the elements from array 2 are present in array 1.
+
+2
+4
+1 2 4 6
+3
+1 2 6
+5
+9 3 6 5
+3
+1 3 3
+Sample Output 1:
+true
+false
+Explanation For Sample Input 1:
+For the first test case:
+Here, all the elements of ARR2 are present in ARR1.
+
+For the second test case:
+All the elements of ARR2 are not present in ARR1, because there are two 3 in the ARR2 but only a single 3 in ARR1.
  */
 public class SubsetArray {
     public static void main(String[] arg) {

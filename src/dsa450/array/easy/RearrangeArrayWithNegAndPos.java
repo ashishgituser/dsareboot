@@ -4,9 +4,10 @@ package dsa450.array.easy;
 import java.util.Arrays;
 
 /*
+Given an array arr of size N containing positive and negative integers.
+Arrange the array alternatively such that every non-negative integer is followed by a negative integer and vice-versa.
 {4, -9, -2, 6, -8} => {-9, 4, -2, 6, -8}
 {1, 2, 3, -5}      => {-5, 1, 2, 3}
-
  */
 public class RearrangeArrayWithNegAndPos {
     public static void main(String[] arg) {

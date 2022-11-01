@@ -2,6 +2,15 @@ package dsa450.array.easy;
 
 import java.util.Arrays;
 
+/*
+
+0 1 1 1 2 2 2 0 0 0
+zeroIndex = 0, twoIndex = n - 1, i = 0
+
+while (i < twoIndex) {
+arr[i] ==
+}
+ */
 public class SortArray012 {
     public static void main(String[] arg) {
         int[] arr = {0, 1, 1, 1, 2, 2, 2, 0, 0, 0};

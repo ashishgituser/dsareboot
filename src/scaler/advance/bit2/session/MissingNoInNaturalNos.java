@@ -3,7 +3,7 @@ package scaler.advance.bit2.session;
 public class MissingNoInNaturalNos {
 
     public static void main(String[] arg) {
-        System.out.println(missingNoUsingXOR(new int[] {1, 2, 4, 5, 6}));
+        System.out.println(missingNoUsingXOR(new int[] {1, 2, 3, 4, 5}));
     }
 
     public static int missingNo(int[] a) {

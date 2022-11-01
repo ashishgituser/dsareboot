@@ -3,6 +3,10 @@ package dsa450.array.easy;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+You have been given a non-empty grid ‘MAT’ with 'N' rows and 'M' columns consisting of only 0s and 1s.
+All the rows are sorted in ascending order.
+ */
 public class MatrixRowWithMaxOnes {
 
     public static void main(String[] arg) {

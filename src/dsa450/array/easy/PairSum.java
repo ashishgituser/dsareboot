@@ -3,11 +3,16 @@ package dsa450.array.easy;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+You are given an array/list ‘ARR’ consisting of ‘N’ distinct integers arranged in ascending order.
+You are also given an integer ‘TARGET’.
+Your task is to count all the distinct pairs in ‘ARR’ such that their sum is equal to ‘TARGET’.
+ */
 public class PairSum {
 
     public static void main(String[] arg) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
-        System.out.println(countPairTwoPointer(arr, 20));
+        System.out.println(countPairTwoPointer(arr, 7));
     }
 
     /*

@@ -3,6 +3,10 @@ package dsa450.array.easy;
 import java.util.Arrays;
 
 /*
+You are given an array ‘ARR’ of size ‘N’ containing each number between 1 and ‘N’ - 1 at least once.
+There is a single integer value that is present in the array twice.
+Your task is to find the duplicate integer value present in the array.
+
 Find Duplicate
 1. Array will always have duplicate
 2. Array will container numbers from 1 to N - 1

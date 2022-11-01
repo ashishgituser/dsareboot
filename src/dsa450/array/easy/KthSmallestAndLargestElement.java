@@ -2,6 +2,22 @@ package dsa450.array.easy;
 
 import java.util.*;
 
+/*
+You are given an array ‘Arr’ consisting of ‘N’ distinct integers and a positive integer ‘K’.
+Find out Kth smallest and Kth largest element of the array.
+It is guaranteed that K is not greater than the size of the array.
+
+Let ‘N’ = 4,  ‘Arr’ be [1, 2, 5, 4] and ‘K’ = 3.
+then the elements of this array in ascending order is [1, 2, 4, 5].
+
+Clearly, the 3rd smallest and largest element of this array is 4 and 2 respectively.
+
+After sorting the array
+-------------------------------------
+smallest => k - 1
+and largest => n - k
+
+ */
 public class KthSmallestAndLargestElement {
 
     /*
@@ -59,6 +75,8 @@ public class KthSmallestAndLargestElement {
     We can use the priority queue or heap. Min and max heap.
     Study heap???????????????????
     Come back after you read about heap
+    T.C => O(n)
+    S.C => O(k)
      */
     public static void kthSmallestLargestMinMaxheap(int[] arr, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();

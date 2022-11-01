@@ -2,6 +2,9 @@ package dsa450.array.easy;
 
 import java.util.Arrays;
 
+/*
+You are given an array “ARR” of size N. Your task is to find out the sum of maximum and minimum elements in the array.
+ */
 public class SumOfMaxAndMin {
 
     public static void main(String[] arg) {

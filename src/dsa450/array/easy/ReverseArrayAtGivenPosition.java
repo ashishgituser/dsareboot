@@ -2,6 +2,11 @@ package dsa450.array.easy;
 
 import java.util.Arrays;
 
+/*
+We have an array ARR = {1, 2, 3, 4, 5, 6} and M = 3 , considering 0
+based indexing so the sub array {5, 6} will be reversed and our
+output array will be {1, 2, 3, 4, 6, 5}.
+ */
 public class ReverseArrayAtGivenPosition {
 
     public static void main(String[] arg) {
