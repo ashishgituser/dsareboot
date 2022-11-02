@@ -48,7 +48,7 @@ public class SearchInArrayQuery {
     ----------------------------------
     Simple approach is to take number from query and then calculate sum
      */
-    public static ArrayList<Integer> searchInTheArray(ArrayList<Integer> arr, ArrayList<Integer> queries, int n, int q) {
+    public static ArrayList<Integer> searchInTheArrayUsingPrefix(ArrayList<Integer> arr, ArrayList<Integer> queries, int n, int q) {
         ArrayList<Integer> result = new ArrayList<>();
         int sum;
 
@@ -70,7 +70,7 @@ public class SearchInArrayQuery {
     Then we can find the index of query kth element.
     Now, prefix[kth index] will be containing the sum of all the elements which are less than equal to k.
      */
-    public static ArrayList<Integer> searchInTheArrayUsingPrefix(ArrayList<Integer> arr, ArrayList<Integer> queries, int n, int q) {
+    public static ArrayList<Integer> searchInTheArray(ArrayList<Integer> arr, ArrayList<Integer> queries, int n, int q) {
         ArrayList<Integer> result = new ArrayList<>();
         int[] prefix = new int[n];
 
@@ -81,26 +81,41 @@ public class SearchInArrayQuery {
 
         for (int i = 0; i < q; i++) {
             int index = findIndex(arr, n, queries.get(i));
-            result.add(prefix[index]);
+            if (index != -1) {
+                result.add(prefix[index]);
+            } else {
+                result.add(0);
+            }
         }
 
         return result;
     }
 
+    /*
+    Find the last occurance of the element.
+    1. if not found and element is greater than the last element -> return n - 1;
+    2. if not found and element is greater than the first element -> return -1;
+     */
     public static int findIndex(ArrayList<Integer> arr, int n, int no) {
-        int l = 0, r = n - 1;
+
+        if (arr.get(n - 1) <= no) return n - 1;
+        if (arr.get(0) > no) return -1;
+
+        int l = 0, r = n - 1, ans = -1;
+        int mid = l + (r - l) / 2;
 
         while (l <= r) {
-            int mid = (l + r) / 2;
-
             if (arr.get(mid) == no) {
-                return mid;
+                ans = mid;
+                l = mid + 1;
             } else if (arr.get(mid) < no) {
+                ans = mid;
                 l = mid + 1;
             } else {
                 r = mid - 1;
             }
+            mid = l + (r - l) / 2;
         }
-        return l;
+        return ans;
     }
 }
